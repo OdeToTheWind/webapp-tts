@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Button</title>
+    <link rel="stylesheet" href="./rough.css">
+</head>
+<body>
+    <div class="container">
+        <button id="btn">
+            <p id="btnText">Submit</p>            
+        </button>
+    </div>
+    <div id="form"> 
+
+    <form id="waterform" method="post">
+
+        <div class="formgroup" id="name-form">
+            <label for="name">Your name*</label>
+            <input type="text" id="name" name="name" />
+        </div>
+        
+        <div class="formgroup" id="email-form">
+            <label for="email">Your e-mail*</label>
+            <input type="email" id="email" name="email" />
+        </div>
+        
+        <div class="formgroup" id="message-form">
+            <label for="message">Your message</label>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        
+            <input type="submit" value="Send your message!" />
+    </form>
+
+</div>
+
+
+    <script type="text/javascript">
+        const btn = document.querySelector("#btn");
+        const btnText = document.querySelector("#btnText");
+
+        btn.onclick = () => {
+            btnText.innerHTML = "Thanks";
+            btn.classList.add("active");
+        };
+    </script>
+</body>
+</html>

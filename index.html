@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTS-WebApp</title>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+    <div>
+        <div class="container header">
+            <h2>TTS Web App</h2>
+
+        </div>
+        <!-- 
+           <div>
+            <a href="./rough.html" target="_blank">Rough</a>
+        </div> 
+        -->
+        
+        <div class="mainbody">
+            <div class="content" >
+                <form class="contentform" id="form" action="../../form-result.php" method="post" target="_self">
+                    <p class="textenter">Enter the Text</p>
+                    
+                    <textarea rows="10" cols="100" name = "description">Enter Text here...
+                    </textarea>  
+                </form>
+            </div>
+            <div class="cardcontaner">
+                <div class="cardlang">
+                    <div class="dropdown">
+                        <button class="dropbtn">Language</button>
+                        <div class="dropdown-content">
+                          <a href="#">English</a>
+                          <a href="#">Hindi</a>
+                          <a href="#">Telugu</a>
+                          <a href="#">Kannada</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="cardgender">
+                    <div class="dropdown">
+                        <button class="dropbtn">Gender</button>
+                        <div class="dropdown-content">
+                          <a href="#">Male</a>
+                          <a href="#">Female</a>
+                        </div>
+                    </div> 
+                </div>
+    
+            </div>
+            <div class=" content">
+                <button id="btn">
+                    <p id="btnText">Submit</p>            
+                </button>
+            </div>  
+        </div>
+                  
+
+        
+        <div class="foot">
+            <div class="container-fluid footcard">
+                
+                <a href="https://iisc.ac.in/" target="_blank">
+                    <img src="../assets/IISC.png" alt="Indian Institute of Science, Bengaluru" width="93" height="100"> 
+                </a>
+                <a href="https://in.linkedin.com/company/spire-lab?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank">
+                    <img src="../assets/spire-lab.png" alt="Indian Institute of Science, Bengaluru" width="50" height="100"> 
+                </a>
+
+            </div>
+            
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        const btn = document.querySelector("#btn");
+        const btnText = document.querySelector("#btnText");
+
+        btn.onclick = () => {
+            btnText.innerHTML = "Thanks";
+            btn.classList.add("active");
+        };
+    </script>
+</body>
+</html>
