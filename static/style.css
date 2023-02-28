@@ -26,14 +26,20 @@ h2 {
 .mainbody{
     padding: 5px;
     margin: 5px;
-    height: 750px;
+    height: 650px;
+    background-color: rgb(250, 236, 236);    
+
+}
+.mainbdy{
+    padding: 5px;
+    margin: 5px;
+    height: 650px;
     background-color: rgb(250, 236, 236);    
 
 }
 .content{
     padding: 5px;
     margin: 5px;
-    background-color: rgb(250, 236, 236);
     display: flex;
     justify-content: center;
 	font-family: 'Sniglet', cursive;
@@ -45,6 +51,13 @@ h2 {
     font-size: 24px;
 
 }
+.langform{
+  background-color: rgb(117, 114, 110);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 .textenter{
     padding: 5px;
     margin: 5px;
@@ -55,8 +68,15 @@ h2 {
 	position: relative;
 	
 }
-input, textarea{
-	width: 500px;	
+.langclass{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+input, textarea{	
 	border: none;
 	border-radius: 20px;
 	outline: none;
@@ -76,7 +96,24 @@ input, textarea{
 input:focus, textarea:focus{
 	border: solid 3px rgb(253, 135, 0);	
 }
+.btncontent{
+    width: 110px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: rgb(250, 236, 236);
+    display: flex;
+    justify-content: center;
+	font-family: 'Sniglet', cursive;
 
+    color: #fff;
+    font-size: 22px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    overflow: hidden;
+    cursor: pointer;
+}
 button{
     width: 110px;
     height: 50px;
@@ -110,11 +147,27 @@ button{
 .cardlang{
     padding: 5px;
     margin: 5px;
+    width: 25px;
 }
 
 .cardgender{
     padding: 5px;
     margin: 5px;
+    width: 25px;
+}
+.genleng{
+    
+    width: 25px !important; 
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	border: solid 3px rgb(117, 114, 110);	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+
+
 }
 /* Dropdown Button */
 .dropbtn {
@@ -170,3 +223,46 @@ button{
     background-color: rgb(252, 233, 210);
     text-align: center;
 }
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .form-signin .form-signin-heading,
+  .form-signin .checkbox {
+    margin-bottom: 10px;
+    align-items: center;
+  }
+
+  .form-signin .checkbox {
+    font-weight: normal;
+  }
+  .form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    align-items: center;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    align-items: center;
+  }
+  .audioplayer{
+    width: 15rem;
+    height: 15rem;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(250, 236, 236);
+  }

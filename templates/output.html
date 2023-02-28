@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask app</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+
+   <div>
+    <div class="container header">
+        <h2>TTS Web App</h2>
+
+    </div>
+       
+    <div class="mainbody">
+        <div class="content">
+            <h3>Your Input Text is: </h3>
+            <h3>{{ description }}</h3>
+        </div>
+        <div class="cardcontaner">
+            <div class="cardlang">
+                <p> Your Language is: {{ language }}</p>
+            </div>
+            <div class="cardgender">
+                <p> Your Gender is: {{ gender }}</p>
+            </div>
+        </div>
+        <div> 
+            <audio controls class="audioplayer">
+                <source src="{{ file }}" type="audio/ogg">
+                <source src="{{ file }}" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio> 
+        </div>
+         
+    </div>
+     
+    <div class="foot">
+        <div class="container-fluid footcard">
+            
+            <a href="https://iisc.ac.in/" target="_blank">
+                <img src="{{url_for('static', filename='assets/IISC.png')}}" alt="Indian Institute of Science, Bengaluru" width="93" height="100"> 
+            </a>
+            <a href="https://in.linkedin.com/company/spire-lab?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank">
+                <img src="{{url_for('static', filename='assets/spire-lab.png')}}" alt="SPIRE LAB, Indian Institute of Science, Bengaluru" width="50" height="100"> 
+            </a>
+
+        </div>
+        
+
+    </div>
+</div>
+
+  </body>
+</html>

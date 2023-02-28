@@ -8,48 +8,37 @@
 
    <div>
     <div class="container header">
-        <h2>TTS Web App</h2>
+        <h2>Text to Speech Web App</h2>
 
     </div>
        
     <div class="mainbody">
-        <div class="content" >
-            <form class="contentform" id="form" action="../../form-result.php" method="post" target="_self">
-                <p class="textenter">Enter the Text</p>
-                
-                <textarea rows="10" cols="100" name = "description">Enter Text here...
-                </textarea>  
-            </form>
-        </div>
-        <div class="cardcontaner">
-            <div class="cardlang">
-                <div class="dropdown">
-                    <button class="dropbtn">Language</button>
-                    <div class="dropdown-content">
-                      <a href="#">English</a>
-                      <a href="#">Hindi</a>
-                      <a href="#">Telugu</a>
-                      <a href="#">Kannada</a>
-                    </div>
-                </div> 
-            </div>
-            <div class="cardgender">
-                <div class="dropdown">
-                    <button class="dropbtn">Gender</button>
-                    <div class="dropdown-content">
-                      <a href="#">Male</a>
-                      <a href="#">Female</a>
-                    </div>
-                </div> 
-            </div>
 
-        </div>
-        <div class=" content">
+      <form class="form-signin" method="post" action="/output">
+        
+          <div class="content">
+            <label for="Description" class="sr-only">Text:</label>
+            <br/>
+              <textarea class="form-control" name="description" rows="5" id="comment" placeholder="Description" required></textarea>
+          </div>
+          <div class="content">
+            <label for="inputName" class="sr-only">Language</label>
+            <br/>
+            <input type="text" id="inputName" name="language" class="genleng" placeholder="language" required autofocus>
+          </div>
+          <div class="content">
+            <label for="inputName" class="sr-only">Gender</label>
+            <br/>
+            <input type="text" id="inputName" name="gender" class="genleng" placeholder="gender" required autofocus>
+          </div>
+          <div class=" content">
             <button id="btn">
                 <p id="btnText">Submit</p>            
             </button>
         </div>  
-    </div>
+        </form>
+  
+      </div>
               
 
     
