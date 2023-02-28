@@ -140,19 +140,42 @@ button{
     background-color: rgb(250, 236, 236);
     display: flex;
     justify-content: center;
-	font-family: 'Sniglet';
+	  font-family: 'Sniglet';
 
 }
 .cardlang{
     padding: 25px;
     margin: 25px;
-    width: 150px;
+    width: 200px;
 }
 
 .cardgender{
     padding: 25px;
     margin: 25px;
-    width: 150px;
+    width: 200px;
+}
+
+.o_cardcontaner{
+  padding: 5px;
+  margin: 5px;
+  background-color: rgb(250, 236, 236);
+  display: flex;
+  justify-content: center;
+  font-family: 'Sniglet';
+
+}
+.o_cardlang{
+  padding: 25px;
+  margin: 25px;
+  width: 250px;
+  justify-content: right;
+}
+
+.o_cardgender{
+  padding: 25px;
+  margin: 25px;
+  width: 250px;
+  justify-content: left;
 }
 .genleng{
     
