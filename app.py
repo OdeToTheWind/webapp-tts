@@ -19,8 +19,9 @@ def process():
     language = request.form['language']
     gender = request.form['gender']
 
-#    return 'Name is: ' + name + ' and the comment is: ' + comment     # This line is also working, but def feunction can return only one task.
-    return render_template('output.html', description=description, language=language, gender=gender)
+    # please save the audio file in the form of "/home/pghosh/Documents/CODES/OPEN-DAY/TTS_Sathvikwebapp/webapp_tts/static/assets/temp.wav"#
+
+    return render_template('output.html', description=description, language=language, gender=gender)  #passing the test, language, gender and dir of generated audio
 
 
 if __name__ == '__main__':

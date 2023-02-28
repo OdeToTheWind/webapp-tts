@@ -25,10 +25,11 @@
                 <p> Your Gender is: {{ gender }}</p>
             </div>
         </div>
-        <div> 
-            <audio controls class="audioplayer">
-                <source src="{{ file }}" type="audio/ogg">
-                <source src="{{ file }}" type="audio/mpeg">
+        <div class="audioplayer"> 
+            <audio controls >
+                <!-- <source src="{{ file }}" type="audio/ogg"> -->
+                <!-- <source src="{{ file }}" type="audio/mpeg"> -->
+                <source src='../static/assets/temp.wav' type="audio/wav">
                 Your browser does not support the audio tag.
             </audio> 
         </div>

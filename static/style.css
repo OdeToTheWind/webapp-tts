@@ -260,7 +260,8 @@ button{
   }
   .audioplayer{
     width: 15rem;
-    height: 15rem;
+    height: 15rem;  
+    display: block;
     align-items: center;
     padding: 5px;
     margin: 5px;
