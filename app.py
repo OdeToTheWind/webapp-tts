@@ -6,7 +6,9 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    languages = ['Select Language', 'Hindi', 'English', 'Kannada', 'Telugu']
+    genders = ['Select Gender', 'Male', 'Female']
+    return render_template('index.html', languages=languages, genders=genders)
 
 
 # @app.route('/output') 
@@ -16,8 +18,8 @@ def index():
 @app.route("/output", methods=['POST'])
 def process():
     description = request.form['description']
-    language = request.form['language']
-    gender = request.form['gender']
+    language = request.form.get('language')
+    gender = request.form.get('gender')
 
     # please save the audio file in the form of "/home/pghosh/Documents/CODES/OPEN-DAY/TTS_Sathvikwebapp/webapp_tts/static/assets/temp.wav"#
 

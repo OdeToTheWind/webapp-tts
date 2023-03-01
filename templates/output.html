@@ -18,12 +18,7 @@
             <h3>{{ description }}</h3>
         </div>
         <div class="o_cardcontaner">
-            <div class="o_cardlang">
-                <p> Your Language is: {{ language }}</p>
-            </div>
-            <div class="o_cardgender">
-                <p> Your Gender is: {{ gender }}</p>
-            </div>
+                <p> Your choice is {{ language }} Language with {{ gender }} Voice.</p>
         </div>
         <div class="cardcontaner"> 
             <audio controls >
@@ -33,6 +28,13 @@
                 Your browser does not support the audio tag.
             </audio> 
         </div>
+        <form class="o_btn" action="/">
+            <div class=" content">
+                <button id="btn">
+                    <p id="btnText">Refresh</p>            
+                </button>
+            </div>  
+        </form>
          
     </div>
      
@@ -51,6 +53,14 @@
 
     </div>
 </div>
+        <script type="text/javascript">
+            const btn = document.querySelector("#btn");
+            const btnText = document.querySelector("#btnText");
 
+            btn.onclick = () => {
+                btnText.innerHTML = "Reload the Page";
+                btn.classList.add("active");
+            };
+        </script>
   </body>
 </html>

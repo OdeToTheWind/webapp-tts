@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Flask app</title>
+    <title>TTS Web App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
 
    <div>
-    <div class="container header">
+    <div class="header">
         <h2>Text to Speech Web App</h2>
 
     </div>
@@ -17,11 +17,26 @@
       <form class="form-signin" method="post" action="/output">
         
           <div class="content">
-            <label for="Description" class="sr-only">Text:</label>
-            <br/>
               <textarea rows="10" cols="100" name="description" id="comment" placeholder="Description" required></textarea>
           </div>
-          <div class="cardcontaner content "> 
+          <div class="cardcontaner content">
+            <select class="dropdown langgendercard"name="language" method="GET" action="/">
+                <option class="dropbtn dropdown-content" value="{{languages[0]}}" selected>{{languages[0]}}</option>
+                {% for language in languages[1:] %}
+                <option class="dropbtn dropdown-content" value="{{language}}">{{language}}</option>
+                {% endfor %}
+            </select>
+            
+            <select class="dropdown langgendercard" name="gender" method="GET" action="/">
+                <option class="dropbtn dropdown-content" value="{{genders[0]}}" selected>{{genders[0]}}</option>
+                {% for gender in genders[1:] %}
+                <option class="dropbtn dropdown-content" value="{{gender}}">{{gender}}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+
+<!--    <div class="cardcontaner content "> 
           <div class="cardlang">
             <label for="inputName" class="sr-only">Language</label>
             <br/>
@@ -32,7 +47,9 @@
             <br/>
             <input type="text" id="inputName" name="gender" class="genleng" placeholder="gender" required autofocus>
           </div>
+
         </div>
+-->
           <div class=" content">
             <button id="btn">
                 <p id="btnText">Submit</p>            
