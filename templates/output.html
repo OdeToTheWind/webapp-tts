@@ -6,22 +6,23 @@
   </head>
   <body>
 
-   <div>
+   <div class="backbody">
     <div class="container header">
-        <h2>TTS Web App</h2>
+        <h2>Text to Speech Web App</h2>
 
     </div>
        
     <div class="mainbody">
-        <div class="content">
+        <div class="inputhead">
             <h3>Your Input Text is: </h3>
-            <h3>{{ description }}</h3>
+            <p class="inputtext">{{ description }}</p>
         </div>
         <div class="o_cardcontaner">
-                <p> Your choice is {{ language }} Language with {{ gender }} Voice.</p>
+                <p class="langgen"> Your choice is {{ language }} Language with {{ gender }} Voice.</p>
         </div>
         <div class="cardcontaner"> 
-            <audio controls >
+            <audio class="audply"
+                controls >
                 <!-- <source src="{{ file }}" type="audio/ogg"> -->
                 <!-- <source src="{{ file }}" type="audio/mpeg"> -->
                 <source src='../static/assets/temp.wav' type="audio/wav">
@@ -31,7 +32,7 @@
         <form class="o_btn" action="/">
             <div class=" content">
                 <button id="btn">
-                    <p id="btnText">Refresh</p>            
+                    <p id="btnText">Wanna Try Again</p>            
                 </button>
             </div>  
         </form>
@@ -42,7 +43,7 @@
         <div class="container-fluid footcard">
             
             <a href="https://iisc.ac.in/" target="_blank">
-                <img src="{{url_for('static', filename='assets/IISC.png')}}" alt="Indian Institute of Science, Bengaluru" width="93" height="100"> 
+                <img src="{{url_for('static', filename='assets/IISc_Reverse.jpg')}}" alt="Indian Institute of Science, Bengaluru" width="100" height="100"> 
             </a>
             <a href="https://in.linkedin.com/company/spire-lab?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank">
                 <img src="{{url_for('static', filename='assets/spire-lab.png')}}" alt="SPIRE LAB, Indian Institute of Science, Bengaluru" width="50" height="100"> 

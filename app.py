@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    languages = ['Select Language', 'Hindi', 'English', 'Kannada', 'Telugu']
-    genders = ['Select Gender', 'Male', 'Female']
+    languages = ['Hindi', 'English', 'Kannada', 'Telugu']
+    genders = ['Male', 'Female']
     return render_template('index.html', languages=languages, genders=genders)
 
 

@@ -1,37 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *{
     padding: 0px;
     margin: 0px;
+    
 }
-
+.backbody{
+  background-color: #C0EEF2 ;
+}
 .container {
     padding: 5px;
     margin: 5px;
     background-color: rgb(252, 233, 210);    
     display: flex;
     justify-content: center;
-	font-family: 'Sniglet';
+	  font-family: 'Roboto', sans-serif;
 }
 .header {
   padding: 5px;
   margin: 5px;
   width: auto;
-  font-family: 'Sniglet';
-  background-color: rgb(252, 233, 210); 
+  font-family: 'Roboto', sans-serif;
+/*  background-color: rgb(252, 233, 210);  */
+  background-image: linear-gradient(to right, #070135,#191825, #2B3467, #3A98B9 );
 }
 
 h2 {
     font-size: 85px;
-    color: rgb(253, 139, 0);
+    color: #ffffff;
     text-align: center;
     font: bold;
 }
 .mainbody{
     padding: 5px;
     margin: 5px;
-    height: 650px;
-    background-image: linear-gradient(135deg, #0873bd, #b68fd9, #ef4267);
-   /* background-color: rgb(250, 236, 236);    */
+  /*   height: 650px;
+   background-image: linear-gradient(180deg, #AAE3E2, #f5e5f5, #FDEBED, 0.2);
+     background-image: linear-gradient(135deg, #0873bd, #b68fd9, #ef4267);
+   background-color: rgb(250, 236, 236);    */
 
+}
+.inputtext{
+  border-top: 5px solid #2B3467;
+  border-bottom: 5px solid #2B3467;
+  border-radius: 40px;
+  padding: 40px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
 }
 .mainbdy{
     padding: 5px;
@@ -45,8 +64,14 @@ h2 {
     margin: 5px;
     display: flex;
     justify-content: center;
-	  font-family: 'Sniglet';
+	  font-family: 'Roboto', sans-serif;
 
+}
+.inputhead{
+  padding: 5px;
+  margin: 5px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 .contentform{
     padding: 25px;
@@ -84,7 +109,7 @@ input, textarea{
 	border-radius: 20px;
 	outline: none;
 	padding: 10px;
-	font-size: 1em;
+	font-size: 40px;
 	color: #676767;
 	transition: border 0.5s;
 	-webkit-transition: border 0.5s;
@@ -107,7 +132,7 @@ input:focus, textarea:focus{
     background-color: rgb(250, 236, 236);
     display: flex;
     justify-content: center;
-	  font-family: 'Sniglet';
+	  font-family: 'Roboto', sans-serif;
     color: #fff;
     font-size: 22px;
     border-radius: 40px;
@@ -117,34 +142,55 @@ input:focus, textarea:focus{
     cursor: pointer;
 }
 button{
-    width: 110px;
-    height: 50px;
+    width: 500px;
+    height: auto;
     border: none;
     outline: none;
-    background: rgb(117, 114, 110);
+  /*  background: #AAE3E2; */
+  background-image: linear-gradient(to right, #070135,#191825, #2B3467, #3A98B9 );
     color: #fff;
-    font-size: 22px;
+    font-size: 30px;
     border-radius: 40px;
     text-align: center;
     box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    padding: 25px;
+    margin: 20px;
+}
+button:hover{
+  width: 750px;
+  height: 150px;
+  border: none;
+  outline: none;
+/*  background: #AAE3E2; */
+background-image: linear-gradient(to right, #3A98B9, #2B3467,#191825, #070135 );
+  color: #fff;
+  font-size: 40px;
+  border-radius: 60px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 25px;
+  margin: 20px;
+
 }
 .active{
-    background: rgb(253, 135, 0);
-    transition: 1s;
+  background-image: linear-gradient(to right, #3A98B9, #2B3467,#191825, #070135 );
+  transition: 1s;
 }
 
 
 .cardcontaner{
     padding: 5px;
     margin: 5px;
-    background-color: rgb(250, 236, 236);   
+    /* background-color: rgb(250, 236, 236);   */
     display: flex;
     justify-content: center;
-	  font-family: 'Sniglet';
-
+	  font-family: 'Roboto', sans-serif;
 }
 .cardlang{
     padding: 25px;
@@ -161,10 +207,10 @@ button{
 .o_cardcontaner{
   padding: 5px;
   margin: 5px;
-  background-color: rgb(250, 236, 236);
+  
   display: flex;
   justify-content: center;
-  font-family: 'Sniglet';
+  font-family: 'Roboto', sans-serif;
 
 }
 .o_cardlang{
@@ -222,12 +268,24 @@ button{
   cursor: pointer;
 }
 
-.langgendercard{
-  padding: 25px;
-  margin: 25px;
-  width: 200px;
-  border-radius: 20px;
+.langgen{
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  color: #2B3467;
+  border-bottom: 5px solid #2B3467;
 } 
+
+.audply{
+  border:5px solid #2B3467; 
+/*  border-image: linear-gradient(45deg, #3A98B9, #2B3467,#191825, #070135); */
+  border-radius: 50px; 
+  width:700px; 
+  height:40px;
+}
 .dropbtn:hover {
   background-color: rgb(66, 47, 26);
 }/*
@@ -291,7 +349,8 @@ border: solid 3px rgb(66, 47, 26);
    .custom-select {
     margin: 50px;
     position: relative;
-    font-family: Arial;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
   }
   
   .custom-select select {
@@ -299,13 +358,13 @@ border: solid 3px rgb(66, 47, 26);
   }
   
   .select-selected {
-    background-color: rgb(135, 30, 255);
+    background-image: linear-gradient(to right, #2B3467, #3A98B9 );
   }
   
   /* Style the arrow inside the select element: */
   .select-selected:after {
     position: absolute;
-    content: "";
+  /*  content: "";   */
     top: 14px;
     right: 10px;
     width: 0;
@@ -318,15 +377,16 @@ border: solid 3px rgb(66, 47, 26);
   .select-selected.select-arrow-active:after {
     border-color: transparent transparent #fff transparent;
     top: 7px;
+    appearance:none;
   }
   
   /* style the items (options), including the selected item: */
   .select-items div,.select-selected {
     color: #ffffff;
-    padding: 36px;
-    margin: 16px;
+    padding: 45px;
+    margin: 25px;
     border: 1px solid transparent;
-    border-radius: 20px;
+    border-radius: 30px;
     border-color: transparent transparent rgba(60, 250, 2, 0.1) transparent;
     cursor: pointer;
   }
@@ -334,7 +394,7 @@ border: solid 3px rgb(66, 47, 26);
   /* Style items (options): */
   .select-items {
     position: absolute;
-    background-color: rgb(135, 30, 255);
+    background-image: linear-gradient(to right, #2B3467, #3A98B9 );
     top: 100%;
     left: 0;
     right: 0;
@@ -354,7 +414,7 @@ border: solid 3px rgb(66, 47, 26);
 .footcard{
     padding: 5px;
     margin: 5px;
-    background-color: rgb(252, 233, 210);
+    background-color: #125c99;
     text-align: center;
 }
 
