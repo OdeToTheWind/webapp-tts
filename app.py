@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 
-
 app = Flask(__name__)
 
 
@@ -9,11 +8,8 @@ def index():
     languages = ['Hindi', 'English', 'Kannada', 'Telugu']
     genders = ['Male', 'Female']
     return render_template('index.html', languages=languages, genders=genders)
-
-
-# @app.route('/output') 
-# def output():
-#       return render_template('output.html')
+    
+        
 
 @app.route("/output", methods=['POST'])
 def process():

@@ -31,10 +31,12 @@
                 Your browser does not support the audio tag.
             </audio> 
         </div>
-        <form class="o_btn" action="/" method="post" name="feedbackdata">
-            <div > 
+        <form class="o_btn" action="/https://script.google.com/macros/s/AKfycbyHu38IMVI2b3jrfDOKpQpygE-VcByWuXjBdaMphJ0_T-BSTqsttMMVyKLD_bYSQDwz/exec" method="post" name="feedbackdata">
+            <div >  
+                <input class="" name="description" style="display:none" value="{{ description }}">
+                <input class="" name="language" style="display:none" value="{{ language }}">
+                <input class="" name="gender" style="display:none" value="{{ gender }}">
                 <h5> How is the quality of Audio? </h5>
-                
                 <br>
                 <div class="content"> 
                 <label class="radio-inline">
@@ -64,21 +66,16 @@
                       name="feedback" 
                       value="Bad Audio">Bad Audio
                 </label>
-                
-                
-                
-
                     </div>
               </div>
 
             <div class=" content">
-                <button class="databutton" type="submit"
-                id="btn">
+                <button class="databutton" type="submit" id="btn">
                     <p id="btnText">Wanna Try Again</p>            
                 </button>
             </div>  
         </form>
-    <!--   <a href="/"><i class="fa fa-refresh fa-spin" style="font-size:24px"></i> </a>   -->  
+       <a href="/" class="content"><i class="fa fa-refresh fa-spin" style="font-size:24px"></i> </a>   
         
          
     </div>
@@ -99,29 +96,7 @@
     </div>
 </div>
         <script type="text/javascript">
-        /*    const btn = document.querySelector("#btn");
-            const btnText = document.querySelector("#btnText");
-
-            btn.onclick = () => {
-                btnText.innerHTML = "Reload the Page";
-                btn.classList.add("active");
-            };
-
-
-            function SubmitForm()
-            {
-                showResultDiv();
-                document.forms['inputdata'].action='https://script.google.com/macros/s/AKfycbyHu38IMVI2b3jrfDOKpQpygE-VcByWuXjBdaMphJ0_T-BSTqsttMMVyKLD_bYSQDwz/exec';
-                document.forms['inputdata'].target='_blank';
-                document.forms['inputdata'].submit();
-
-                document.forms['inputdata'].action='/';
-                document.forms['inputdata'].target='_blank';
-                document.forms['inputdata'].submit();
-                return false;
-
-            }
-            
+       
             const scriptURL = 'https://script.google.com/macros/s/AKfycbyHu38IMVI2b3jrfDOKpQpygE-VcByWuXjBdaMphJ0_T-BSTqsttMMVyKLD_bYSQDwz/exec'
 			const form = document.forms['feedbackdata']
 		  
@@ -129,10 +104,10 @@
 			  e.preventDefault()
 			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                
-				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(response => alert("Thank you!" ))
 				.then(() => {  window.location.reload(); })
 				.catch(error => console.error('Error!', error.message))
-			})*/
+			})
             
         </script>
   </body>
