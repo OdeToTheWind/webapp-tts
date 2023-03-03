@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TTS Web App</title>
+    <title>Text To Speech</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   </head>
   <body>
 
    <div class="backbody">
     <div class="header">
-        <h2>Text to Speech Web App</h2>
+        <h2>MAKE COMPUTER SPEAK IN INDIAN LANGUAGES</h2>
 
     </div>
        
     <div class="mainbody">
 
-      <form class="form-signin" method="post" action="/output" id="data-submit">
+      <form class="form-signin" method="post" name="inputdata">
         
           <div class="content">
-              <textarea rows="5"  name="description" id="comment" placeholder="Enter your Text Here ... " required></textarea>
+              <textarea rows="3" cols="50"  name="description" id="comment" placeholder="Enter your Text Here ... (20 to 150 characters range) " value="Upload" required></textarea>
           </div>
           <div class="cardcontaner content">
             <div class="custom-select" style="width:450px;">
@@ -31,7 +33,7 @@
             
             <div class=" custom-select -select" style="width:450px;" >
             <select name="gender" method="GET" action="/" required>
-                <option value="{{genders[0]}}" selected="true" disabled>Select Gender</option>
+                <option value="{{genders[0]}}" selected="true"  disabled>Select Gender</option>
                 {% for gender in genders[0:] %}
                 <option value="{{gender}}">{{gender}}</option>
                 {% endfor %}
@@ -39,13 +41,23 @@
             </div>
         </div>
 
-
-       
+        <div class=" content">
+          <button class="databutton" id="btn" type="submit" formaction="/output">
+              <p id="btnText">Submit</p>            
+          </button>
+      </div>
+       <!--- 
           <div class=" content">
-            <button id="btn" type="submit">
+            <button class="databutton" id="btn" type="submit"  formaction="https://script.google.com/macros/s/AKfycbyHu38IMVI2b3jrfDOKpQpygE-VcByWuXjBdaMphJ0_T-BSTqsttMMVyKLD_bYSQDwz/exec">
                 <p id="btnText">Submit</p>            
             </button>
         </div>  
+        <div class="content">
+          <button class="audioicon" id="btn" type="submit" formaction="/output">
+            <p id="btnText">Play Audio</p>         
+          </button>
+        </div>-->
+            
         </form>
   
       </div>
@@ -68,13 +80,7 @@
     </div>
 </div>
 <script type="text/javascript">
-    const btn = document.querySelector("#btn");
-    const btnText = document.querySelector("#btnText");
-
-    btn.onclick = () => {
-        btnText.innerHTML = "Thanks";
-        btn.classList.add("active");
-    };
+   
 
     var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
@@ -156,12 +162,18 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect); 
-
-jQuery('#data-submit').on('submit',function(e){
-  e.preventDefault();
-  alert('ss');
-})
-  
+/*
+			const scriptURL = ''
+			const form = document.forms['inputdata']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Now Play Audio" ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+			})
+  */
 
 </script>
   </body>

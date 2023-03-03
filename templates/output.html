@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Flask app</title>
+    <title>Text To Speech</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
   <body>
 
    <div class="backbody">
     <div class="container header">
-        <h2>Text to Speech Web App</h2>
+        <h2>MAKE COMPUTER SPEAK IN INDIAN LANGUAGES</h2>
 
     </div>
        
     <div class="mainbody">
         <div class="inputhead">
             <h3>Your Input Text is: </h3>
-            <p class="inputtext">{{ description }}</p>
+            <p class="inputtext" >{{ description }}</p>
         </div>
         <div class="o_cardcontaner">
                 <p class="langgen"> Your choice is {{ language }} Language with {{ gender }} Voice.</p>
@@ -29,39 +31,55 @@
                 Your browser does not support the audio tag.
             </audio> 
         </div>
-        <form class="o_btn" action="/">
-
-            <div> 
-                <p> How are you Sathvik and AmartyaVeer? </p>
+        <form class="o_btn" action="/" method="post" name="feedbackdata">
+            <div > 
+                <h5> How is the quality of Audio? </h5>
                 
                 <br>
+                <div class="content"> 
+                <label class="radio-inline">
                 <input type="radio"
                       name="feedback" 
-                      value="fine"  checked="checked">Fine
+                      value="Like Human" >Like Human
+                </label>
+                <label class="radio-inline">
+                    <input type="radio"
+                      name="feedback" 
+                      value="Slightly Robotic">Slightly Robotic
+                </label>
+                <label class="radio-inline">
+                    <input type="radio"
+                      name="feedback" 
+                      value="Robotic">Robotic                
+                </label>
                 
-                <input type="radio"
+                <label class="radio-inline">
+                    <input type="radio"
                       name="feedback" 
-                      value="ok">Ok
+                      value="Very Robotic">Very Robotic
+                </label>
                
-                <input type="radio"
+                <label class="radio-inline">
+                    <input type="radio"
                       name="feedback" 
-                      value="as usual">As Usual
+                      value="Bad Audio">Bad Audio
+                </label>
                 
-                <input type="radio"
-                      name="feedback" 
-                      value="chill">Chill
                 
-                <input type="radio"
-                      name="feedback" 
-                      value="Struggling">Struggling
+                
+
+                    </div>
               </div>
 
             <div class=" content">
-                <button id="btn">
+                <button class="databutton" type="submit"
+                id="btn">
                     <p id="btnText">Wanna Try Again</p>            
                 </button>
             </div>  
         </form>
+    <!--   <a href="/"><i class="fa fa-refresh fa-spin" style="font-size:24px"></i> </a>   -->  
+        
          
     </div>
      
@@ -81,13 +99,41 @@
     </div>
 </div>
         <script type="text/javascript">
-            const btn = document.querySelector("#btn");
+        /*    const btn = document.querySelector("#btn");
             const btnText = document.querySelector("#btnText");
 
             btn.onclick = () => {
                 btnText.innerHTML = "Reload the Page";
                 btn.classList.add("active");
             };
+
+
+            function SubmitForm()
+            {
+                showResultDiv();
+                document.forms['inputdata'].action='https://script.google.com/macros/s/AKfycbyHu38IMVI2b3jrfDOKpQpygE-VcByWuXjBdaMphJ0_T-BSTqsttMMVyKLD_bYSQDwz/exec';
+                document.forms['inputdata'].target='_blank';
+                document.forms['inputdata'].submit();
+
+                document.forms['inputdata'].action='/';
+                document.forms['inputdata'].target='_blank';
+                document.forms['inputdata'].submit();
+                return false;
+
+            }
+            
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyHu38IMVI2b3jrfDOKpQpygE-VcByWuXjBdaMphJ0_T-BSTqsttMMVyKLD_bYSQDwz/exec'
+			const form = document.forms['feedbackdata']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+               
+				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+			})*/
+            
         </script>
   </body>
 </html>
