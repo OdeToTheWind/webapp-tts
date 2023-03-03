@@ -105,6 +105,7 @@ h2 {
     z-index: 1;
 }
 input, textarea{	
+  width: 1200px;
 	border: none;
 	border-radius: 20px;
 	outline: none;
@@ -347,10 +348,11 @@ border: solid 3px rgb(66, 47, 26);
 
    /* The container must be positioned relative: */
    .custom-select {
-    margin: 50px;
+    margin: 50px; 
     position: relative;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
   }
   
   .custom-select select {

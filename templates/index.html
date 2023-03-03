@@ -14,13 +14,13 @@
        
     <div class="mainbody">
 
-      <form class="form-signin" method="post" action="/output">
+      <form class="form-signin" method="post" action="/output" id="data-submit">
         
           <div class="content">
-              <textarea rows="5" cols="70" name="description" id="comment" placeholder="Enter your Text Here ... " required></textarea>
+              <textarea rows="5"  name="description" id="comment" placeholder="Enter your Text Here ... " required></textarea>
           </div>
           <div class="cardcontaner content">
-            <div class="custom-select" style="width:300px;">
+            <div class="custom-select" style="width:450px;">
             <select name="language" method="GET" action="/" required>
                 <option value="{{languages[0]}}" selected="true" disabled>Select Language</option>
                 {% for language in languages[0:] %}
@@ -29,7 +29,7 @@
             </select>
             </div>
             
-            <div class=" custom-select -select" style="width:300px;" >
+            <div class=" custom-select -select" style="width:450px;" >
             <select name="gender" method="GET" action="/" required>
                 <option value="{{genders[0]}}" selected="true" disabled>Select Gender</option>
                 {% for gender in genders[0:] %}
@@ -40,22 +40,9 @@
         </div>
 
 
-<!--    <div class="cardcontaner content "> 
-          <div class="cardlang">
-            <label for="inputName" class="sr-only">Language</label>
-            <br/>
-            <input type="text" id="inputName" name="language" class="genleng" placeholder="language" required autofocus>
-          </div>
-          <div class="cardgender">
-            <label for="inputName" class="sr-only">Gender</label>
-            <br/>
-            <input type="text" id="inputName" name="gender" class="genleng" placeholder="gender" required autofocus>
-          </div>
-
-        </div>
--->
+       
           <div class=" content">
-            <button id="btn">
+            <button id="btn" type="submit">
                 <p id="btnText">Submit</p>            
             </button>
         </div>  
@@ -170,10 +157,12 @@ function closeAllSelect(elmnt) {
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect); 
 
+jQuery('#data-submit').on('submit',function(e){
+  e.preventDefault();
+  alert('ss');
+})
+  
 
-function langalert(select) {
-  alert(select.options[select.selectedIndex].text);
-}
 </script>
   </body>
 </html>
